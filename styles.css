@@ -1,105 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body {
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background-color: white;
 }
 
 header {
-    display: inline-block;
     height: 70px;
-    align-items: center;
     width: 100%;
+    overflow: hidden; /* Contener floats */
 }
 
 .izquierda {
-    display: inline-block;
+    float: left;
 }
-.izquierda img{
+
+.izquierda img {
     height: 50px;
-    margin-left: 200px;
+    margin-left: 20px;
     display: inline-block;
     vertical-align: middle;
-    margin-top: 25px;
+    margin-top: 10px;
 }
 
-.nombre-empresa{
+.nombre-empresa {
     display: inline-block;
     vertical-align: middle;
-    line-height: 5px;
-    margin-top: 60px;
-    margin-left: 2px;
+    line-height: 50px;
+    margin-left: 10px;
     font-size: 30px;
+    color: #000;
 }
 
-.derecha{
+.derecha {
     float: right;
-    line-height: 80px;
-    margin-top: 25px;
-    margin-right: 200px;
+    line-height: 70px;
+    margin-right: 20px;
 }
 
 .derecha a {
     float: left;
     text-decoration: none;
-    padding-right: 2px;
-    margin-right: 100px;
-    font-family:Arial, Helvetica, sans-serif;
+    padding-right: 20px;
+    font-family: 'Poppins', sans-serif;
     color: rgb(173, 173, 173);
     font-size: 20px;
-    padding: 0;
     margin-top: 0;
-
 }
 
-#boton-navegacion{
+.derecha a:hover{
+    color: black;
+}
 
+#boton-navegacion {
     background-color: rgb(0, 153, 255);
     display: block;
     color: white;
-    border-radius: 30px;
-    padding: 1px 38px;
+    border-radius: 20px;
+    padding: 0px 2px;
+    font-family: 'Poppins', sans-serif;
 }
 
-/*CONTENIDO PAGINA*/
-.Contenido{
-    margin-left: 200px;
-    margin-top: 300px;
+#boton-navegacion:hover{
+    color: black;
 }
 
-.Contenido h1{
+/* CONTENIDO PAGINA */
+section {
+    clear: both;
+    overflow: hidden;
+    margin-top: 100px;
+}
+
+.Contenido {
+    float: left;
+    width: 45%;
+    margin-left: 20px;
+}
+
+.Contenido h1 {
     font-size: 50px;
-    display: block;
     font-weight: bold;
+    margin: 0 0 10px 0;
 }
 
-.texto-inferior{
+.texto-inferior {
     margin-top: -20px;
 }
 
-.Contenido p{
+.Contenido p {
     font-family: sans-serif;
     font-size: 20px;
     color: rgb(173, 173, 173);
+    margin-top: 10px;
 }
 
-.parrafo-inferior{
+.parrafo-inferior {
     margin-bottom: 60px;
 }
 
-.boton-start{
+.boton-start {
     text-decoration: none;
     font-family: sans-serif;
     color: white;
     background-color: rgb(46, 168, 250);
-    line-height: 20px;
     padding: 15px 30px;
     border-radius: 15px;
+    display: inline-block;
+    margin-top: 10px;
 }
 
-div .imagen{
-    height: 600px;
+.boton-start:hover{
+    color: black;
+}
+
+.imagen {
     float: right;
-    margin-top: -420px;
-    margin-right: 150px;
+    width: 45%;
+    height: auto;
+    margin-right: 20px;
+}
+
+/* Media Queries para Responsividad */
+
+/* Pantallas medianas y menores */
+@media screen and (max-width: 1024px) {
+    .Contenido, .imagen {
+        width: 90%;
+        float: none;
+        margin: 0 auto 20px auto;
+        display: block;
+        text-align: center;
+    }
+
+    .Contenido h1 {
+        font-size: 35px;
+    }
+
+    .Contenido p {
+        font-size: 16px;
+    }
+
+    #boton-navegacion {
+        padding: 8px 16px;
+    }
+}
+
+/* Pantallas pequeñas */
+@media screen and (max-width: 480px) {
+    .nombre-empresa {
+        font-size: 24px;
+        display: block;
+        line-height: normal;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+
+    .izquierda img {
+        display: block;
+        margin: 10px auto 0 auto;
+    }
+
+    .izquierda {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    .derecha {
+        float: none;
+        text-align: center;
+        width: 100%;
+        margin: 10px 0 0 0;
+    }
+
+    .derecha a {
+        float: none;
+        display: inline-block;
+        margin: 0 10px 10px 10px;
+        font-size: 16px;
+    }
+
+    .Contenido {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .boton-start {
+        padding: 10px 20px;
+    }
 }
