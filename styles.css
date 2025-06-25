@@ -7,25 +7,23 @@ body {
     background-color: white;
 }
 
-header {
+.header {
     height: 70px;
     width: 100%;
-    overflow: hidden; /* Contener floats */
+    overflow: hidden;
 }
 
-.izquierda {
+.header__left {
     float: left;
 }
 
-.izquierda img {
+.header__logo {
     height: 50px;
-    margin-left: 20px;
-    display: inline-block;
+    margin: 10px 0 0 20px;
     vertical-align: middle;
-    margin-top: 10px;
 }
 
-.nombre-empresa {
+.header__title {
     display: inline-block;
     vertical-align: middle;
     line-height: 50px;
@@ -34,76 +32,70 @@ header {
     color: #000;
 }
 
-.derecha {
+.header__right {
     float: right;
     line-height: 70px;
     margin-right: 20px;
 }
 
-.derecha a {
+.nav__link {
     float: left;
     text-decoration: none;
     padding-right: 20px;
-    font-family: 'Poppins', sans-serif;
     color: rgb(173, 173, 173);
     font-size: 20px;
-    margin-top: 0;
 }
 
-.derecha a:hover{
+.nav__link:hover {
     color: black;
 }
 
-#boton-navegacion {
+.nav__link--cta {
     background-color: rgb(0, 153, 255);
-    display: block;
     color: white;
     border-radius: 20px;
-    padding: 0px 2px;
-    font-family: 'Poppins', sans-serif;
+    padding: 0 8px;
+    display: block;
 }
 
-#boton-navegacion:hover{
+.nav__link--cta:hover {
     color: black;
 }
 
-/* CONTENIDO PAGINA */
-section {
+.hero {
     clear: both;
     overflow: hidden;
     margin-top: 100px;
 }
 
-.Contenido {
+.hero__content {
     float: left;
     width: 45%;
     margin-left: 20px;
 }
 
-.Contenido h1 {
+.hero__title {
     font-size: 50px;
     font-weight: bold;
     margin: 0 0 10px 0;
 }
 
-.texto-inferior {
+.hero__subtitle {
     margin-top: -20px;
 }
 
-.Contenido p {
-    font-family: sans-serif;
+.hero__text {
     font-size: 20px;
     color: rgb(173, 173, 173);
     margin-top: 10px;
 }
 
-.parrafo-inferior {
+.hero__text--secondary {
     margin-bottom: 60px;
 }
 
-.boton-start {
+.hero__button {
     text-decoration: none;
-    font-family: sans-serif;
     color: white;
     background-color: rgb(46, 168, 250);
     padding: 15px 30px;
@@ -112,83 +104,56 @@ section {
     margin-top: 10px;
 }
 
-.boton-start:hover{
+.hero__button:hover {
     color: black;
 }
 
-.imagen {
+.hero__image-wrapper {
     float: right;
     width: 45%;
-    height: auto;
     margin-right: 20px;
 }
 
-/* Media Queries para Responsividad */
-
-/* Pantallas medianas y menores */
-@media screen and (max-width: 1024px) {
-    .Contenido, .imagen {
-        width: 90%;
-        float: none;
-        margin: 0 auto 20px auto;
-        display: block;
-        text-align: center;
-    }
-
-    .Contenido h1 {
-        font-size: 35px;
-    }
-
-    .Contenido p {
-        font-size: 16px;
-    }
-
-    #boton-navegacion {
-        padding: 8px 16px;
-    }
+.hero__image {
+    width: 100%;
+    height: auto;
 }
 
-/* Pantallas pequeñas */
-@media screen and (max-width: 480px) {
-    .nombre-empresa {
-        font-size: 24px;
-        display: block;
-        line-height: normal;
-        margin-left: 20px;
-        margin-top: 10px;
-    }
 
-    .izquierda img {
-        display: block;
-        margin: 10px auto 0 auto;
-    }
+@media (max-width: 480px) {
+.header__title {
+    font-size: 24px;
+    display: block;
+    line-height: normal;
+    margin-left: 20px;
+    margin-top: 10px;
+}
 
-    .izquierda {
-        float: none;
-        text-align: center;
-        width: 100%;
-    }
+.header__logo {
+    display: block;
+    margin: 10px auto 0 auto;
+}
 
-    .derecha {
-        float: none;
-        text-align: center;
-        width: 100%;
-        margin: 10px 0 0 0;
-    }
+.header__left,
+.header__right {
+    float: none;
+    text-align: center;
+    width: 100%;
+}
 
-    .derecha a {
-        float: none;
-        display: inline-block;
-        margin: 0 10px 10px 10px;
-        font-size: 16px;
-    }
+.nav__link {
+    float: none;
+    display: inline-block;
+    margin: 0 10px 10px 10px;
+    font-size: 16px;
+}
 
-    .Contenido {
-        margin-left: 0;
-        width: 100%;
-    }
+.hero__content {
+    margin-left: 0;
+    width: 100%;
+}
 
-    .boton-start {
-        padding: 10px 20px;
-    }
+.hero__button {
+    padding: 10px 20px;
+}
 }
