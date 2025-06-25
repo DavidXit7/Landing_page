@@ -3,39 +3,36 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Landing page</title>
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <div class="izquierda">
-            <img src="img/logo.png" alt="" />
-            <h1 class="nombre-empresa">Danvo in a new branch</h1>
+    <header class="header">
+        <div class="header__left">
+            <img src="img/logo.png" alt="" class="header__logo" />
+            <h1 class="header__title">Danvo in a new branch</h1>
         </div>
-        <nav class="derecha">
-            <a href="#">Features</a>
-            <a href="#">Pricing</a>
-            <a href="#">Testimonials</a>
-            <a href="#" id="boton-navegacion">Sign Up</a>
-        </nav>
-    </header>
-    <section>
-        <div class="Contenido">
-            <h1>Future is Here</h1> 
-            <h1 class="texto-inferior">Start Exploring Now.</h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias omnis
-                quae
-            </p>
-            <p class="parrafo-inferior">
-                Fuga doloribus sed reiciendis consectetur impedit,
-                similique error
-            </p>
-            <a href="#" class="boton-start">Get Started</a>
-        </div>
-        <div>
-            <img src="img/person.png" alt="Persona con un telefono" class="imagen">
-        </div>
-    </section>
+    <nav class="header__right">
+        <a href="#" class="nav__link">Features</a>
+        <a href="#" class="nav__link">Pricing</a>
+        <a href="#" class="nav__link">Testimonials</a>
+        <a href="#" class="nav__link nav__link--cta" id="nav-signup">Sign Up</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero__content">
+        <h1 class="hero__title">Future is Here</h1>
+        <h1 class="hero__subtitle">Start Exploring Now.</h1>
+        <p class="hero__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias omnis quae</p>
+        <p class="hero__text hero__text--secondary">Fuga doloribus sed reiciendis consectetur impedit, similique error</p>
+        <a href="#" class="hero__button">Get Started</a>
+    </div>
+
+    <div class="hero__image-wrapper">
+        <img src="img/person.png" alt="Persona con un telefono" class="hero__image" />
+    </div>
+</section>
+
 </body>
 </html>
